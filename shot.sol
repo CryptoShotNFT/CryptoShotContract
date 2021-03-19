@@ -65,12 +65,6 @@ contract SHOTcontract {
         emit Transfer(owner, buyer, numTokens);
         return true;
     }
-    
-    function mint(uint numTokens) public returns (bool) {
-        require(numTokens > 0);
-        balances[msg.sender] = balances[msg.sender].add(numTokens);
-        return true;
-    }
 }
 
 library SafeMath { 
